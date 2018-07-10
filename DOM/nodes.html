@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="article">
+        <h3>Заголовок статьи</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+    </div>
+<script>
+var articleDiv = document.querySelector("div.article");
+var nodes = articleDiv.childNodes;
+for(var i=0; i<nodes.length;i++){
+ 
+    var type = "";
+    if(nodes[i].nodeType===1)
+        type="элемент";
+    else if(nodes[i].nodeType===2)
+        type="атрибут";
+    else if(nodes[i].nodeType===3)
+        type="текст";
+         
+    console.log(nodes[i].nodeName + ": " + type);
+}
+</script>
+</body>
+</html>
