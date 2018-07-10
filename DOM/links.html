@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <a href="article1.html">Статья 1</a>
+    <script>
+      var links = document.links;
+
+      for(var i = 0; i<links.length;i++){
+
+        document.write("<br/" + links[i].innerText);
+        document.write("<br/>" + links[i].href);
+      }
+    </script>
+  </body>
+</html>
