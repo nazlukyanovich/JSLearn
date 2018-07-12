@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <form name="search">
+      <input id="a" type="text" name="first" />
+      <input id="b" type="text" name="second" />
+      <input type="button" name="print" value="Нажать" />
+    </form>
+    <div id="printBlock"></div>
+  </body>
+
+</html>
+<script>
+  function printForm() {
+    debugger;
+    var printBlock = document.getElementById("printBlock");
+    printBlock.outerHTML = '<p style="color: red;">Ti pidor</p>';
+    var zaebalo = parseInt(document.search.first.value);
+    var govno = parseInt(document.search.second.value);
+    printBlock.textContent = zaebalo + govno;
+  }
+  var printButton = document.search.print;
+  printButton.addEventListener("click", printForm);
+</script>
