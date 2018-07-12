@@ -4,21 +4,19 @@
   <meta charset="utf-8" />
   <style>
     #rect{
-      width: 500px;
-      height: 500px;
-      background-color: mediumslateblue;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
     }
   </style>
 </head>
 <body>
   <div id="rect"></div>
   <script>
-    function handler(event){
-      console.log("Event type:" + event.type);
-      console.log(event.target);
-    }
-    var rect = document.getElementById("rect");
-    rect.addEventListener("click", handler);
+  function handler(e){
+    alert(e.type);
+  }
+  document.getElementById("rect").onclick = handler
   </script>
 </body>
 </html>
