@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      table, td {
+        border: 1px double darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    table1
+    <table>
+    
+    </table>
+    table2
+    <table>
+
+    </table>
+  </body>
+    <script>
+      var table = document.querySelector("table");
+      for(var i = 0; i <=9; i++) {
+        var tr = document.createElement("tr");
+        for(var x = 1; x <= 10; x++){
+          var td = document.createElement('td');
+          td.textContent = i*10+x;
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+    </script>
+</html>
