@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      input{
+        position:absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="Ты пидор:)" />
+
+    <script>
+      function random(n){
+        return Math.round(Math.random() * n);
+      }
+      function gg(){
+        var input = document.getElementsByTagName("input");
+        input[0].style.left = random(document.body.clientHeight+0) + "px";
+        input[0].style.top = random(document.body.clientWidth-0) + "px";
+      }
+      (function ffds() {
+        var input = document.getElementsByTagName("input");
+        input[0].onmouseover = gg;
+      })()
+    </script>
+  </body>
+</html>
