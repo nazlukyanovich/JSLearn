@@ -12,17 +12,17 @@
     <input type="button" value="Ты пидор:)" />
 
     <script>
-      function random(n){
-        return Math.round(Math.random() * n);
+      function random(max, min = 0){
+        return Math.floor(Math.random() * (max - min)) + min;
       }
       function gg(){
-        var input = document.getElementsByTagName("input");
-        input[0].style.left = random(document.body.clientHeight+0) + "px";
-        input[0].style.top = random(document.body.clientWidth-0) + "px";
+        var input = document.getElementsByTagName("input")[0];
+        input.style.left = random(window.innerWidth-200) + "px";
+        input.style.top = random(window.innerHeight-200) + "px";
       }
-      (function ffds() {
-        var input = document.getElementsByTagName("input");
-        input[0].onmouseover = gg;
+        (function ffds() {
+        var input = document.getElementsByTagName("input")[0];
+        input.onmouseover = gg;
       })()
     </script>
   </body>
